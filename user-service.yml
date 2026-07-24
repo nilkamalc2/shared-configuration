@@ -1,0 +1,23 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/restaurant
+    username: root
+    password: nilkamal
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+jwt:
+  secret: wA8/HHCY5Z5rMrZti+JKBBUd5IpwzPmlqust57iJkls=
+  issuer: auth-service
+
+security:
+  cookie:
+    secure: false
+    same-site: Lax
+    path: /
