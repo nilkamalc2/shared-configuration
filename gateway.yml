@@ -40,4 +40,7 @@ management:
   endpoints:
     web:
       exposure:
-        include: gateway
+        include: health,info,routes
+  endpoint:
+    health:
+      show-details: always
