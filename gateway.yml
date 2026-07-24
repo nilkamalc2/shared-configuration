@@ -20,6 +20,11 @@ spring:
           predicates:
             - Path=/api/v1/users/**
 
+
+logging:
+  level:
+    org.springframework.cloud.gateway: DEBUG
+
 eureka:
   client:
     service-url:
