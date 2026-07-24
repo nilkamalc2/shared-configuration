@@ -23,7 +23,8 @@ spring:
 
 logging:
   level:
-    org.springframework.cloud.gateway: DEBUG
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.web: DEBUG
 
 eureka:
   client:
