@@ -24,3 +24,7 @@ management:
   endpoint:
     health:
       show-details: always
+
+security:
+  gateway:
+    internal-secret: nilkamal123

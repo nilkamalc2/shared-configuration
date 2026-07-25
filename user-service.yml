@@ -31,6 +31,8 @@ jwt:
   issuer: auth-service
 
 security:
+  gateway:
+    internal-secret: nilkamal123
   cookie:
     secure: false
     same-site: Lax
