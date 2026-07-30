@@ -28,3 +28,11 @@ management:
 security:
   gateway:
     internal-secret: nilkamal123
+
+jwt:
+  secret: wA8/HHCY5Z5rMrZti+JKBBUd5IpwzPmlqust57iJkls=
+  issuer: auth-service
+  access-token-expiration: 900000
+  refresh-token-expiration: 604800000
+  access-cookie-name: ACCESS_TOKEN
+  refresh-cookie-name: REFRESH_TOKEN
