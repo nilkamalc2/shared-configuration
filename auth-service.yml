@@ -25,17 +25,3 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:8761/eureka/
-
-jwt:
-  secret: wA8/HHCY5Z5rMrZti+JKBBUd5IpwzPmlqust57iJkls=
-  issuer: auth-service
-  access-token-expiration: 900000
-  refresh-token-expiration: 604800000
-  access-cookie-name: ACCESS_TOKEN
-  refresh-cookie-name: REFRESH_TOKEN
-
-security:
-  cookie:
-    secure: false
-    same-site: Lax
-    path: /

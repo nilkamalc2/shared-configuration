@@ -1,0 +1,29 @@
+jwt:
+  secret: wA8/HHCY5Z5rMrZti+JKBBUd5IpwzPmlqust57iJkls=
+  issuer: auth-service
+  access-token-expiration: 900000
+  refresh-token-expiration: 604800000
+  access-cookie-name: ACCESS_TOKEN
+  refresh-cookie-name: REFRESH_TOKEN
+
+security:
+  gateway:
+    internal-secret: nilkamal123
+  cookie:
+    secure: false
+    same-site: Lax
+    path: /
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,routes,gateway
+  endpoint:
+    health:
+      show-details: always
+
+logging:
+  level:
+    org.springframework.cloud.gateway: TRACE
+    org.springframework.web: DEBUG
