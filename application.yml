@@ -1,8 +1,10 @@
 jwt:
   secret: wA8/HHCY5Z5rMrZti+JKBBUd5IpwzPmlqust57iJkls=
   issuer: auth-service
-  access-token-expiration: 900000
-  refresh-token-expiration: 604800000
+  #access-token-expiration: 900000 (15 minutes in Java Duration)
+  #refresh-token-expiration: 604800000 (7 days in Java Duration)
+  access-token-expiration: 300000
+  refresh-token-expiration: 420000
   access-cookie-name: ACCESS_TOKEN
   refresh-cookie-name: REFRESH_TOKEN
 
