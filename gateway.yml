@@ -1,6 +1,13 @@
 server:
   port: 8080
 
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      timeout: 2s
+
 eureka:
   instance:
     prefer-ip-address: true
@@ -9,3 +16,37 @@ eureka:
       defaultZone: http://localhost:8761/eureka
     register-with-eureka: true
     fetch-registry: true
+
+rate-limit:
+  enabled: true
+
+  rules:
+
+    - name: login
+      path: /api/v1/auth/login
+      method: POST
+      requests: 5
+      window: 1m
+
+    - name: register
+      path: /api/v1/auth/register
+      method: POST
+      requests: 3
+      window: 1h
+
+    - name: refresh
+      path: /api/v1/auth/refresh
+      method: POST
+      requests: 120
+      window: 1h
+
+    - name: logout
+      path: /api/v1/auth/logout
+      method: POST
+      requests: 60
+      window: 1h
+
+    - name: authenticated
+      path: /api/v1/**
+      requests: 300
+      window: 1m
