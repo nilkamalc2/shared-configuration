@@ -57,6 +57,16 @@ rate-limit:
       window: 1m
 
 resilience4j:
+
+  timelimiter:
+    instances:
+
+      authService:
+        timeout-duration: 5s
+
+      userService:
+        timeout-duration: 5s
+
   circuitbreaker:
     instances:
 
