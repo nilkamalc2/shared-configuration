@@ -29,3 +29,12 @@ logging:
   level:
     org.springframework.cloud.gateway: TRACE
     org.springframework.web: DEBUG
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: all
+      retries: 3
