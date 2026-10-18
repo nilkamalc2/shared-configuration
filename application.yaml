@@ -15,6 +15,8 @@ security:
     secure: false
     same-site: Lax
     path: /
+  service-auth:
+    shared-secret: nilkamal123
 
 management:
   endpoints:
