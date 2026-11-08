@@ -8,9 +8,9 @@ spring:
     password: nilkamal
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
+    database-platform: org.hibernate.dialect.MariaDBDialect
     hibernate:
       ddl-auto: validate
-      #show-sql: true
     open-in-view: false
   servlet:
     multipart:
