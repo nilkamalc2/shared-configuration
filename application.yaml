@@ -11,6 +11,8 @@ jwt:
 security:
   gateway:
     internal-secret: nilkamal123
+    allowed-internal-services:
+      - inventory-service
   cookie:
     secure: false
     same-site: Lax

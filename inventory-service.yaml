@@ -21,6 +21,8 @@ app:
   clients:
     catalog:
       base-url: http://catalog-service:8083
+    order:
+      base-url: http://order-service:8085
 
 eureka:
   instance:
