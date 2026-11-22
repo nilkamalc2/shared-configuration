@@ -13,12 +13,14 @@ security:
     internal-secret: nilkamal123
     allowed-internal-services:
       - inventory-service
+  service-auth:
+    shared-secret: nilkamal123
+    allowed-services:
+      - inventory-service
   cookie:
     secure: false
     same-site: Lax
     path: /
-  service-auth:
-    shared-secret: nilkamal123
 
 management:
   endpoints:
