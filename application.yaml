@@ -14,7 +14,7 @@ security:
     allowed-internal-services:
       - inventory-service
   service-auth:
-    shared-secret: nilkamal123
+    shared-secret: ${SERVICE_AUTH_SECRET}
     allowed-services:
       - inventory-service
   cookie:
