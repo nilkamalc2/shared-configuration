@@ -10,12 +10,8 @@ jwt:
 
 security:
   gateway:
-    internal-secret: nilkamal123
+    internal-secret: ${INTERNAL_AUTH_SECRET}
     allowed-internal-services:
-      - inventory-service
-  service-auth:
-    shared-secret: ${SERVICE_AUTH_SECRET}
-    allowed-services:
       - inventory-service
   cookie:
     secure: false

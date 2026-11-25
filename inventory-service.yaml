@@ -17,6 +17,12 @@ spring:
       max-file-size: 5MB
       max-request-size: 5MB
 
+security:
+  service-auth:
+    shared-secret: ${SERVICE_AUTH_SECRET}
+    allowed-services:
+      - order-service
+
 app:
   clients:
     catalog:
